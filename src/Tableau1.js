@@ -25,9 +25,10 @@ class Tableau1 extends Phaser.Scene{
             this.load.image('g-grass-'+i, 'assets/level/ground/g-grass-'+i+'.png');
         }
 
-        for(let i=1; i<=3;i++){
-            this.load.image( 'filterFilm'+i, 'assests/level/filters/film-'+i+'.png');
-
+        for(let i=1; i<=3;i++) {
+            this.load.image('filterFilm' +i, 'assets/level/filters/film/frame-'+i+'.png');
+        }
+        for(let i=1;i<=3;i++) {
             this.load.image('bg-animation-'+i, 'assets/level/background-2/bg-animation/bg-animation-'+i+'png');
         }
 
