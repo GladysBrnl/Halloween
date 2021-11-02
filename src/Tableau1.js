@@ -9,6 +9,7 @@ class Tableau1 extends Phaser.Scene{
     preload(){
         //bg 2 (tout au fond et très flou)
         this.load.image('bg2-terrain-2', 'assets/level/background-2/bg2-terrain-2.png');
+        this.load.image('bg2-terrain-1', 'assets/level/background-2/bg2-terrain-1.png')
         this.load.image('bg2-tree-2', 'assets/level/background-2/bg2-tree-2.png');
 
         //bg 1 (gris légèrement flou)
@@ -56,12 +57,20 @@ class Tableau1 extends Phaser.Scene{
          * @see https://photonstorm.github.io/phaser3-docs/Phaser.GameObjects.Container.html
          */
         this.bg2Container=this.add.container(0,0);
+
         /**
          * Terrain dans bg2
          * @type {Phaser.GameObjects.Image}
          */
         let bg2Terrain2=this.add.image(-100,100, 'bg2-terrain-2').setOrigin(0,0);
         this.bg2Container.add(bg2Terrain2);
+
+        /**
+         * Terrain dans bg2
+         *  @type {Phaser.GameObjects.Container}
+         */
+        let bg2Terrain1=this.add.image(-300,100,'bg2-terrain-1').setOrigin(0,0);
+        this.bg2Container.add(bg2Terrain1)
         /**
          * Arbre dans bg2
          * @type {Phaser.GameObjects.Image}
