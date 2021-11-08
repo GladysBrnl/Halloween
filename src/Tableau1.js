@@ -33,6 +33,7 @@ class Tableau1 extends Phaser.Scene{
         this.load.image('g-water','assets/level/ground/g-water.png');
         this.load.image('g-box2','assets/level/ground/g-box-2.png');
         this.load.image('g-fellen', 'assets/level/ground/g-fellen-tree-1.png');
+        this.load.image('g-stone-5','assets/level/ground/g-stone-5.png');
 
 
 
@@ -205,7 +206,7 @@ class Tableau1 extends Phaser.Scene{
         let gMid6=this.add.image(gMid5.x+gMid5.width,350, 'gRight').setOrigin(0,0);
         this.groundContainer.add(gMid6);
 
-        let gMid7=this.add.image(1900,400, 'gLeft').setOrigin(0,0);
+        let gMid7=this.add.image(1900,400, 'gMid').setOrigin(0,0);
         this.groundContainer.add(gMid7);
         /**
          * De l'herbe en textures qui se répète
@@ -223,14 +224,14 @@ class Tableau1 extends Phaser.Scene{
          * filtre type film au premier plan
          * @type {Phaser.GameObjects.Sprite}
          */
-        this.filterFilm = this.add.sprite(0, 0, 'bloody').setOrigin(0,0);
+        this.filterFilm = this.add.sprite(0, 0, 'filterFilm1').setOrigin(0,0);
         //animation de 3 images
         this.anims.create({
-            key: 'bloody',
+            key: 'film',
             frames: [
-                {key:'frame1'},
-                {key:'frame2'},
-                {key:'frame3'},
+                {key:'filterFilm1'},
+                {key:'filterFilm2'},
+                {key:'filterFilm3'},
             ],
             frameRate: 16,
             repeat: -1
@@ -243,8 +244,15 @@ class Tableau1 extends Phaser.Scene{
         let gstone4=this.add.image(1050,320,'g-stone-4').setOrigin(0,0);
         this.groundContainer.add(gstone4);
 
+        let gstone5=this.add.image(1200,330,'g-stone-5').setOrigin(0,0);
+        this.groundContainer.add(gstone5);
+
+
         let gmushroom1=this.add.image(200,280,'g-mushroom1').setOrigin(0,0);
         this.groundContainer.add(gmushroom1);
+
+        let gmushroom2=this.add.image(1375,280,'g-mushroom1').setOrigin(0,0);
+        this.groundContainer.add(gmushroom2);
 
         let gwoodenBridge=this.add.image(570,270,'g-wooden-bridge').setOrigin(0,0);
         this.groundContainer.add(gwoodenBridge);
