@@ -87,6 +87,7 @@ class Tableau1 extends Phaser.Scene{
          * Terrain1 dans bg2
          *  @type {Phaser.GameObjects.Container}
          */
+
         let bg2Terrain1=this.add.image(700,100,'bg2-terrain-1').setOrigin(0,0);
         this.bg2Container.add(bg2Terrain1);
         /**
@@ -163,6 +164,11 @@ class Tableau1 extends Phaser.Scene{
          * @type {Phaser.GameObjects.Container}
          */
         this.groundContainer=this.add.container(0,0);
+
+        let gwater=this.add.image(590,400,'g-water').setOrigin(0,0);
+        gwater.scale=1.2;
+        this.groundContainer.add(gwater);
+
         /**
          * Arbre
          * @type {Phaser.GameObjects.Image}
@@ -257,8 +263,7 @@ class Tableau1 extends Phaser.Scene{
         let gwoodenBridge=this.add.image(570,270,'g-wooden-bridge').setOrigin(0,0);
         this.groundContainer.add(gwoodenBridge);
 
-        let gwater=this.add.image(610,400,'g-water').setOrigin(0,0);
-        this.groundContainer.add(gwater);
+
 
         let gbox2=this.add.image(700,250,'g-box2').setOrigin(0,0);
         this.groundContainer.add(gbox2)
